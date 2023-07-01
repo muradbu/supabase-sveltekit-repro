@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 0 0% 9%;
+	}
+
+	.dark {
+		--background: 0 0% 0%;
+		--foreground: 0 0% 93%;
+	}
+}
+
+@layer base {
+	h1 {
+		@apply text-2xl font-bold;
+	}
+
+	h2 {
+		@apply text-xl font-bold;
+	}
+
+	h3 {
+		@apply text-lg font-bold;
+	}
+
+	body {
+		@apply bg-background text-foreground;
+		font-feature-settings: 'rlig' 1, 'calt' 1;
+	}
+}
